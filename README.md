@@ -37,7 +37,7 @@ Then trigger the first run manually:
 gh workflow run post-releases.yml
 ```
 
-After that it runs automatically every 30 minutes. When new releases are posted, the workflow commits the updated `state/seen.json` back to the repo.
+After that it runs automatically every 12 hours. When new releases are posted, the workflow commits the updated `state/seen.json` back to the repo.
 
 ## Notes
 
