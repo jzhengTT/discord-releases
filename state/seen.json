@@ -20,6 +20,7 @@
     "https://github.com/tenstorrent/riescue/releases/tag/v1.7.0",
     "https://github.com/tenstorrent/riscv_arch_tests/releases/tag/v0.2.0%2Baligned-access",
     "https://github.com/tenstorrent/sfpi/releases/tag/7.67.0",
+    "https://github.com/tenstorrent/sfpi/releases/tag/7.67.0-checking",
     "https://github.com/tenstorrent/tt-animatediff/releases/tag/v0.9.0",
     "https://github.com/tenstorrent/tt-buda/releases/tag/v0.19.3",
     "https://github.com/tenstorrent/tt-burnin/releases/tag/v0.4.3",
@@ -61,6 +62,7 @@
     "https://github.com/tenstorrent/ttnn-visualizer/releases/tag/v0.96.0",
     "https://github.com/tenstorrent/ttsim/releases/tag/v1.9.6",
     "https://github.com/tenstorrent/ttsim/releases/tag/v1.9.8",
+    "https://github.com/tenstorrent/ttsim/releases/tag/v1.9.9",
     "https://github.com/tenstorrent/whisper/releases/tag/1.861",
     "https://github.com/tsingletaryTT/tensix-viz/releases/tag/v1.1.2",
     "https://github.com/zk4x/zyx/releases/tag/v0.14.0"
