@@ -8,6 +8,7 @@
     "https://github.com/dstackai/dstack/releases/tag/0.20.29",
     "https://github.com/dstackai/dstack/releases/tag/0.21.0",
     "https://github.com/dstackai/dstack/releases/tag/0.21.1",
+    "https://github.com/dstackai/dstack/releases/tag/0.21.2",
     "https://github.com/mesham/tt-sim/releases/tag/v1.0",
     "https://github.com/mesham/tt-sim/releases/tag/v2.0",
     "https://github.com/moritztng/tt-atom/releases/tag/v0.2.0",
@@ -20,6 +21,7 @@
     "https://github.com/moritztng/tt-bio/releases/tag/v0.6.1",
     "https://github.com/moritztng/tt-bio/releases/tag/v0.6.2",
     "https://github.com/moritztng/tt-bio/releases/tag/v0.6.3",
+    "https://github.com/moritztng/tt-bio/releases/tag/v0.6.4",
     "https://github.com/tenstorrent-riscv-software/tt-bh-linux/releases/tag/v0.11",
     "https://github.com/tenstorrent/luwen/releases/tag/bh-mod-v1.0.0",
     "https://github.com/tenstorrent/luwen/releases/tag/bh-mod-v1.1.0",
@@ -34,6 +36,7 @@
     "https://github.com/tenstorrent/sfpi/releases/tag/7.67.0-syntharg",
     "https://github.com/tenstorrent/sfpi/releases/tag/7.68.0",
     "https://github.com/tenstorrent/sfpi/releases/tag/7.69.0",
+    "https://github.com/tenstorrent/sfpi/releases/tag/7.70.0",
     "https://github.com/tenstorrent/tt-animatediff/releases/tag/v0.9.0",
     "https://github.com/tenstorrent/tt-buda/releases/tag/v0.19.3",
     "https://github.com/tenstorrent/tt-burnin/releases/tag/v0.4.3",
@@ -82,6 +85,7 @@
     "https://github.com/tenstorrent/tt-torch/releases/tag/0.4.0",
     "https://github.com/tenstorrent/tt-umd/releases/tag/v0.9.9",
     "https://github.com/tenstorrent/tt-vscode-toolkit/releases/tag/v0.1.19",
+    "https://github.com/tenstorrent/tt-vscode-toolkit/releases/tag/v0.1.27",
     "https://github.com/tenstorrent/tt-xla/releases/tag/1.3.0",
     "https://github.com/tenstorrent/tt-xla/releases/tag/1.4.0",
     "https://github.com/tenstorrent/ttnn-visualizer/releases/tag/v0.94.0",
@@ -97,6 +101,7 @@
     "https://github.com/tenstorrent/whisper/releases/tag/1.861",
     "https://github.com/tsingletaryTT/tensix-viz/releases/tag/v1.1.2",
     "https://github.com/tsingletaryTT/tensix-viz/releases/tag/v1.2.0",
+    "https://github.com/tsingletaryTT/tt-bio-demo/releases/tag/v0.4.0",
     "https://github.com/zk4x/zyx/releases/tag/v0.14.0"
   ]
 }
