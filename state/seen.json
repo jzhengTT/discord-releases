@@ -24,6 +24,7 @@
     "https://github.com/moritztng/tt-bio/releases/tag/v0.6.3",
     "https://github.com/moritztng/tt-bio/releases/tag/v0.6.4",
     "https://github.com/moritztng/tt-bio/releases/tag/v0.7.0",
+    "https://github.com/moritztng/tt-bio/releases/tag/v0.7.1",
     "https://github.com/tenstorrent-riscv-software/tt-bh-linux/releases/tag/v0.11",
     "https://github.com/tenstorrent/luwen/releases/tag/bh-mod-v1.0.0",
     "https://github.com/tenstorrent/luwen/releases/tag/bh-mod-v1.1.0",
@@ -63,9 +64,11 @@
     "https://github.com/tenstorrent/tt-installer/releases/tag/v3.5.2",
     "https://github.com/tenstorrent/tt-installer/releases/tag/v3.5.3",
     "https://github.com/tenstorrent/tt-installer/releases/tag/v3.5.4",
+    "https://github.com/tenstorrent/tt-installer/releases/tag/v3.5.5",
     "https://github.com/tenstorrent/tt-kmd/releases/tag/ttkmd-2.10.0",
     "https://github.com/tenstorrent/tt-kmd/releases/tag/ttkmd-2.11.0",
     "https://github.com/tenstorrent/tt-local-generator/releases/tag/v0.11.0",
+    "https://github.com/tenstorrent/tt-local-generator/releases/tag/v0.96.4",
     "https://github.com/tenstorrent/tt-metal/releases/tag/v0.74.0",
     "https://github.com/tenstorrent/tt-metal/releases/tag/v0.75.0",
     "https://github.com/tenstorrent/tt-metal/releases/tag/v0.76.0",
@@ -108,6 +111,7 @@
     "https://github.com/tsingletaryTT/tensix-viz/releases/tag/v1.1.2",
     "https://github.com/tsingletaryTT/tensix-viz/releases/tag/v1.2.0",
     "https://github.com/tsingletaryTT/tt-bio-demo/releases/tag/v0.4.0",
+    "https://github.com/tsingletaryTT/tt-bio-demo/releases/tag/v0.5.0",
     "https://github.com/zk4x/zyx/releases/tag/v0.14.0"
   ]
 }
