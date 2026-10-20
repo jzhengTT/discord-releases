@@ -24,6 +24,8 @@ jobs:
 
       - run: pip install -r requirements.txt
 
+      - run: python -m unittest discover -s tests
+
       - name: Post new releases
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Post new releases from the Planet Tenstorrent Atom feed to a Discord channel.
 
-Fetches the releases feed, compares entry IDs against state/seen.json, and
-posts each unseen release to the Discord webhook given by DISCORD_WEBHOOK_URL.
-State is rewritten after every successful post so an interrupted run never
-causes duplicates.
+Fetches the official-releases feed, keeps only entries tagged official (a
+guard; the feed should contain nothing else), compares entry IDs against
+state/seen.json, and posts each unseen release to the Discord webhook given by
+DISCORD_WEBHOOK_URL. State is rewritten after every successful post so
+an interrupted run never causes duplicates.
 """
 
 import html
@@ -19,7 +20,13 @@ from pathlib import Path
 import feedparser
 import requests
 
-FEED_URL = "https://docs.tenstorrent.com/tt-awesome/feeds/releases.xml"
+# The official-only companion to feeds/releases.xml: same entry IDs, restricted
+# to repos in a Tenstorrent-owned org. Community projects with Tenstorrent-like
+# names (tt-sim/Wolfpine next to ttsim) never appear here.
+FEED_URL = "https://docs.tenstorrent.com/tt-awesome/feeds/releases-official.xml"
+# Every entry still carries <category term="official|affiliated|community"/>.
+# Checking it guards against the feed ever regressing to publish everything.
+OFFICIAL_CATEGORY = "official"
 STATE_FILE = Path(__file__).parent / "state" / "seen.json"
 DESCRIPTION_LIMIT = 1500
 SECONDS_BETWEEN_POSTS = 1.2  # webhook limit is ~30 requests/min
@@ -70,6 +77,10 @@ def fetch_entries():
     return feed.entries
 
 
+def is_official(entry) -> bool:
+    return any(tag.get("term") == OFFICIAL_CATEGORY for tag in entry.get("tags", []))
+
+
 def build_embed(entry) -> dict:
     description = strip_html(entry.get("summary", ""))
     if len(description) > DESCRIPTION_LIMIT:
@@ -110,8 +121,9 @@ def main() -> None:
         )
 
     entries = fetch_entries()
+    official = [e for e in entries if is_official(e)]
     seen = load_seen()
-    new_entries = [e for e in entries if e.id not in seen]
+    new_entries = [e for e in official if e.id not in seen]
     new_entries.sort(key=lambda e: e.get("updated_parsed") or time.gmtime(0))
 
     for entry in new_entries:
@@ -123,7 +135,8 @@ def main() -> None:
 
     print(
         f"posted {len(new_entries)} new release(s), "
-        f"skipped {len(entries) - len(new_entries)} already seen"
+        f"skipped {len(official) - len(new_entries)} already seen, "
+        f"ignored {len(entries) - len(official)} non-official"
     )
 
 

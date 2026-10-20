@@ -1,11 +1,12 @@
 # discord-releases
 
-Posts new releases from the [Planet Tenstorrent releases feed](https://docs.tenstorrent.com/tt-awesome/planet/) to a Discord channel, on a schedule, via GitHub Actions.
+Posts new official Tenstorrent releases from the [Planet Tenstorrent releases feed](https://docs.tenstorrent.com/tt-awesome/planet/) to a Discord channel, on a schedule, via GitHub Actions.
 
-- Feed: `https://docs.tenstorrent.com/tt-awesome/feeds/releases.xml`
+- Feed: `https://docs.tenstorrent.com/tt-awesome/feeds/releases-official.xml`, the releases feed restricted to repos in a Tenstorrent-owned org. The full `releases.xml` also lists `community` and `affiliated` projects, some with Tenstorrent-like names (e.g. the community simulator `tt-sim`, now Wolfpine, next to Tenstorrent's `ttsim`)
+- As a guard, only entries tagged `<category term="official"/>` are posted even if the feed ever contains others
 - Each release becomes one embed (title, link, summary, timestamp)
-- Already-posted releases are tracked in `state/seen.json`, which the workflow commits back to the repo — no duplicates
-- On the very first run the state file is empty, so the entire feed backlog is posted (oldest first, rate-limited)
+- Already-posted releases are tracked in `state/seen.json`, which the workflow commits back to the repo - no duplicates
+- On the very first run the state file is empty, so the entire official backlog is posted (oldest first, rate-limited)
 
 ## Setup
 
@@ -21,7 +22,13 @@ cp .env.example .env   # paste your webhook URL into .env
 export $(cat .env) && python post_releases.py
 ```
 
-The first run posts every release currently in the feed. Running it again immediately should print `posted 0 new release(s)`.
+The first run posts every official release currently in the feed. Running it again immediately should print `posted 0 new release(s)`.
+
+Run the tests with:
+
+```sh
+python -m unittest discover -s tests
+```
 
 ### 3. Set up GitHub Actions
 
